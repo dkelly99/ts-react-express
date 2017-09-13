@@ -8,8 +8,12 @@ The 2 most important aspects of this application are:
 
 To run in development mode: 
 
-`npm run dev` 
+1. `npm run prepare:dev`
+2. `npm run start:dev`
+3. [http://localhost:3000/index.html](http://localhost:3000/index.html)
 
-(or `npm run prepare:dev` and `npm run start:dev`) 
+To run in production mode: 
 
- 
+1. `npm install`
+2. `npm run build`
+3. `npm start`

@@ -9,7 +9,7 @@ export const server = new Server(app);
 server.listen(port);
 
 app.use((req, _, next) => {
-    console.log('request xyz: ', req.originalUrl);
+    console.log('request: ', req.originalUrl);
     next();
 });
 
