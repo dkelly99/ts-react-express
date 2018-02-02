@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
-import * as path from 'path';
 import * as fs from 'fs';
+import * as path from 'path';
+import * as webpack from 'webpack';
 declare const __dirname: string;
 
 // const nodeModules = fs.readdirSync('node_modules').filter( (pkg) => ['.bin'].indexOf(pkg) === -1 );
@@ -14,10 +14,9 @@ export const serverConfig: webpack.Configuration = {
         path: path.resolve(__dirname, '../', 'dist/server')
     },
 
-    target: "node",
+    target: 'node',
 
-    node: {
-        __dirname: true,
+    node: {__dirname: true,
         __filename: true
     },
 
@@ -42,11 +41,11 @@ export const serverConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
                 loader: 'ts-loader',
                 options: {
                     configFile: 'src/server/tsconfig.json'
-                }
+                },
+                test: /\.tsx?$/
             }
         ]
     }

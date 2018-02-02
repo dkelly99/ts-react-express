@@ -1,6 +1,6 @@
-import * as webpack from 'webpack';
-import * as path from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
+import * as path from 'path';
+import * as webpack from 'webpack';
 
 export const clientConfig: webpack.Configuration = {
     entry: {
@@ -13,7 +13,7 @@ export const clientConfig: webpack.Configuration = {
     },
 
     // Enable sourcemaps for debugging webpack's output.
-    devtool: 'source-map',  //#eval-source-map
+    devtool: 'source-map',  // #eval-source-map
 
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -23,11 +23,11 @@ export const clientConfig: webpack.Configuration = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
                 loader: 'ts-loader',
                 options: {
                     configFile: 'src/client/tsconfig.json'
-                }
+                },
+                test: /\.tsx?$/
             }
         ]
     },
